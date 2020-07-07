@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".single_movie_details.SingleMovie">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:text="@string/connection_problem"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/details_movie_background_img"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:contentDescription="@string/movie_background_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="16:9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/endgame_background" />
+
+        <TextView
+            android:id="@+id/details_movie_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_background_img"
+            tools:text="Movie" />
+
+        <TextView
+            android:id="@+id/details_movie_tagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/details_movie_title"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_title"
+            tools:text="Tagline" />
+
+        <TextView
+            android:id="@+id/details_movie_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/movie_info"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/details_movie_title"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_tagline" />
+
+        <TextView
+            android:id="@+id/details_movie_release_date_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/release_date"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/details_movie_title"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_info" />
+
+        <TextView
+            android:id="@+id/details_movie_release_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/details_movie_release_date_info"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_info"
+            tools:text="2020-01-01" />
+
+        <TextView
+            android:id="@+id/details_movie_rating_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rating"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/details_movie_title"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_release_date_info" />
+
+        <TextView
+            android:id="@+id/details_movie_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/details_movie_rating_info"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_release_date_info"
+            tools:text="10" />
+
+        <TextView
+            android:id="@+id/details_movie_runtime_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/runtime"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/details_movie_title"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_rating_info" />
+
+        <TextView
+            android:id="@+id/details_movie_runtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/details_movie_runtime_info"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_rating_info"
+            tools:text="144 minutes" />
+
+        <TextView
+            android:id="@+id/details_movie_budget_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/budget"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/details_movie_title"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_runtime_info" />
+
+        <TextView
+            android:id="@+id/details_movie_budget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/details_movie_budget_info"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_runtime_info"
+            tools:text="$250 000 000" />
+
+        <TextView
+            android:id="@+id/details_movie_revenue_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/revenue"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/details_movie_title"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_budget_info" />
+
+        <TextView
+            android:id="@+id/details_movie_revenue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/details_movie_revenue_info"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_budget_info"
+            tools:text="$250 000 000" />
+
+        <TextView
+            android:id="@+id/details_movie_overview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/overview"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/details_movie_title"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_revenue_info" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/details_movie_title"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_overview"
+            tools:text="@tools:sample/lorem/random" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

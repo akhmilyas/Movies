@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Movies</string>
+    <string name="connection_problem">Connection problem!</string>
+    <string name="movie_background_image">movie background image</string>
+    <string name="movie_info">Movie Info</string>
+    <string name="release_date">Release date:\u0020</string>
+    <string name="rating">Rating:\u0020</string>
+    <string name="runtime">Runtime:\u0020</string>
+    <string name="budget">Budget:\u0020</string>
+    <string name="revenue">Revenue:\u0020</string>
+    <string name="overview">Overview</string>
 </resources>
