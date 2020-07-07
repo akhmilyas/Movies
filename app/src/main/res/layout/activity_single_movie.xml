@@ -4,27 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".single_movie_details.SingleMovie">
+    tools:context=".ui.single_movie_details.SingleMovie">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <ProgressBar
-            android:id="@+id/progress_bar"
+            android:id="@+id/details_movie_progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:visibility="gone"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@android:color/white"
-            android:text="@string/connection_problem"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -162,7 +151,7 @@
             tools:text="$250 000 000" />
 
         <TextView
-            android:id="@+id/details_movie_overview"
+            android:id="@+id/details_movie_overview_info"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/overview"
@@ -171,12 +160,26 @@
             app:layout_constraintTop_toBottomOf="@id/details_movie_revenue_info" />
 
         <TextView
+            android:id="@+id/details_movie_overview"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/details_movie_title"
-            app:layout_constraintTop_toBottomOf="@id/details_movie_overview"
+            app:layout_constraintTop_toBottomOf="@id/details_movie_overview_info"
             tools:text="@tools:sample/lorem/random" />
+
+        <TextView
+            android:id="@+id/details_movie_error"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@android:color/white"
+            android:text="@string/connection_problem"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
